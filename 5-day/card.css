@@ -1,0 +1,127 @@
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 15px;
+}
+.card {
+    width: 280px;
+    height: 600px;
+    box-shadow: 0px 0px 2px 0px black;
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: scale(101%);
+    box-shadow: 0px 0px 4px 0px black;
+}
+
+.card .card_inner {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: -2;
+}
+
+.card .card_inner .img_box {
+    width: 100%;
+    height: 200px;
+    z-index: -1;
+    margin-bottom: 10px;
+}
+
+
+.card .card_inner .img_box img {
+    width: 100%; 
+    height: 100%;
+}
+
+.card .card_inner .title {
+    font-size: 28px;
+    margin-bottom: 4px;
+}
+
+.card .card_inner .sub_title {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.card .card_inner .benefits_box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around
+}
+
+.card .card_inner .data {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .card_inner .data img {
+    width: 24px;
+    margin-right: 5px
+}
+
+.card .card_inner .benefits_box ul{
+    font-size: 16px;
+}
+
+.card .card_inner .benefits_box ul li::marker{
+    color: #3b3b3b;
+}
+
+.card .card_inner .price {
+    font-size: 16px;
+}
+
+.card .card_inner .btn_agendar {
+    background: transparent;
+    font-size: 16px;
+    border: 1px solid rgb(97, 97, 97);
+    padding: 10 15px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.card .card_inner .btn_agendar:hover {
+    background-color: #d3d3d3
+}
+    
+
+@media (max-width: 890px) {
+    .card .card_inner .title {
+        font-size: 24px;
+    }
+
+    .card .card_inner .sub_title {
+        font-size: 16px;
+    }
+
+    .card .card_inner .benefits_box ul {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 740px) {
+    main {
+        flex-wrap: wrap;
+    }
+}
+
